@@ -9,7 +9,8 @@
   "dependencies": {
     "egg": "^3",
     "egg-scripts": "^2",
-    "egg-validate": "^2.0.2"
+    "egg-validate": "^2.0.2",
+    "egg-view-ejs": "^3.0.0"
   },
   "devDependencies": {
     "egg-bin": "^5",
