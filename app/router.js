@@ -6,6 +6,10 @@
 module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.home.index);
+  router.get('/newApplication', controller.home.newApplication);
+  router.get('/newContext', controller.home.newContext);
+  router.post('/newRequest', controller.home.newRequest);
+  router.get('/newResponse', controller.home.newResponse);
   router.get('/user', controller.user.index);
   router.get('/user/lists', controller.user.lists);
   router.get('/user/detail', controller.user.detail);

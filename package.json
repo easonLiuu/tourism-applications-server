@@ -7,10 +7,14 @@
     "declarations": true
   },
   "dependencies": {
+    "dayjs": "^1.11.7",
     "egg": "^3",
+    "egg-mysql": "^3.3.0",
     "egg-scripts": "^2",
+    "egg-sequelize": "^6.0.0",
     "egg-validate": "^2.0.2",
-    "egg-view-ejs": "^3.0.0"
+    "egg-view-ejs": "^3.0.0",
+    "mysql2": "^3.0.1"
   },
   "devDependencies": {
     "egg-bin": "^5",

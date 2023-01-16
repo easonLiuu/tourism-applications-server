@@ -18,7 +18,11 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1673709959396_1553';
 
   // add your middleware config here
-  config.middleware = [];
+  config.middleware = ['httpLog'];
+
+  config.httpLog = {
+    type: 'all'
+  };
 
   config.security = {
     csrf: {
@@ -52,6 +56,35 @@ module.exports = appInfo => {
     httpOnly: false,
     maxAge: 1000 * 50,
     renew: true
+  };
+
+  config.auth = {
+    exclude: ['/home', '/user', '/login', '/logout']
+  };
+
+  config.mysql = {
+    app: true,
+    agent: false,
+    client: {
+      host: '127.0.0.1',
+      port: '3306',
+      user: 'root',
+      password: 'ljr20010425',
+      database: 'egg'
+    }
+  };
+
+  config.sequelize = {
+    dialect: 'mysql',
+    host: '127.0.0.1',
+    port: '3306',
+    user: 'root',
+    password: 'ljr20010425',
+    database: 'egg',
+    define: {
+      timestamps: false,
+      freezeTableName: true
+    }
   };
 
   // add your user config here
