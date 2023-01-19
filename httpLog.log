@@ -160,3 +160,12 @@
 2023-01-18 20:35:39 [httpLog] {"method":"POST","url":"/api/user/login","data":{"username":"test2","password":"1234567"},"startTime":"2023-01-18 20:35:39","endTime":"2023-01-18 20:35:39","timeLength":21}
 2023-01-18 20:35:39 [httpLog] {"method":"POST","url":"/api/user/detail","data":{"id":10},"startTime":"2023-01-18 20:35:39","endTime":"2023-01-18 20:35:39","timeLength":3}
 2023-01-18 20:36:07 [httpLog] {"method":"POST","url":"/api/user/logout","data":{},"startTime":"2023-01-18 20:36:07","endTime":"2023-01-18 20:36:07","timeLength":1}
+2023-01-19 21:23:17 [httpLog] {"method":"POST","url":"/api/commons/citys","data":{},"startTime":"2023-01-19 21:23:17","endTime":"2023-01-19 21:23:17","timeLength":6}
+2023-01-19 21:23:17 [httpLog] {"method":"POST","url":"/api/house/hot","data":{},"startTime":"2023-01-19 21:23:17","endTime":"2023-01-19 21:23:17","timeLength":0}
+2023-01-19 21:23:27 [httpLog] {"method":"POST","url":"/api/user/detail","data":{"id":10},"startTime":"2023-01-19 21:23:27","endTime":"2023-01-19 21:23:27","timeLength":14}
+2023-01-19 21:28:31 [httpLog] {"method":"POST","url":"/api/user/login","data":{"username":"test2","password":"1234567"},"startTime":"2023-01-19 21:28:31","endTime":"2023-01-19 21:28:31","timeLength":49}
+2023-01-19 21:28:31 [httpLog] {"method":"POST","url":"/api/user/detail","data":{"id":10},"startTime":"2023-01-19 21:28:31","endTime":"2023-01-19 21:28:31","timeLength":5}
+2023-01-19 21:30:21 [httpLog] {"method":"POST","url":"/api/user/login","data":{"username":"test2","password":"1234567"},"startTime":"2023-01-19 21:30:21","endTime":"2023-01-19 21:30:21","timeLength":54}
+2023-01-19 21:30:55 [httpLog] {"method":"POST","url":"/api/user/login","data":{"username":"test2","password":"1234567"},"startTime":"2023-01-19 21:30:55","endTime":"2023-01-19 21:30:55","timeLength":17}
+2023-01-19 21:32:11 [httpLog] {"method":"POST","url":"/api/user/login","data":{"username":"test2","password":"1234567"},"startTime":"2023-01-19 21:32:11","endTime":"2023-01-19 21:32:11","timeLength":17}
+2023-01-19 21:32:11 [httpLog] {"method":"POST","url":"/api/user/detail","data":{"id":10},"startTime":"2023-01-19 21:32:11","endTime":"2023-01-19 21:32:11","timeLength":6}
