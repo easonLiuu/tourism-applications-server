@@ -4,7 +4,7 @@ module.exports = app => {
         id: { type: INTEGER, primaryKey: true, autoIncrement: true },
         username: STRING(20),
         password: STRING(64),
-        avator: TEXT('long'),
+        avatar: TEXT('long'),
         phone: STRING(20),
         sign: STRING(300),
         createTime: DATE,

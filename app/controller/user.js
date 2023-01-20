@@ -145,6 +145,16 @@ class UserController extends BaseController {
       // } 
     }
   }
+
+  async edit(){
+    const { ctx, app } = this;
+    const result = ctx.service.user.edit({
+      ...ctx.params(),
+      updateTime: ctx.helper.time()
+    });
+
+    this.success(result)
+  }
 }
 
 module.exports = UserController;
