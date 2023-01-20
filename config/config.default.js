@@ -91,10 +91,20 @@ module.exports = appInfo => {
     secret: 'liuJiaRui',
   };
 
+  config.redis = {
+    client: {
+      port: 6379,
+      host: '127.0.0.1',
+      password: 'ljr20010425',
+      db: 0
+    }
+  };
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
-    salt: 'LJR'
+    salt: 'LJR',
+    redisExpire: 60 * 60 * 24
   };
 
   return {
