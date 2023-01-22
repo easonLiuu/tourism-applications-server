@@ -4,7 +4,7 @@ yarn-error.log
 node_modules/
 *-lock.json
 *-lock.yaml
-yarn.lock
+httpLog.log
 coverage/
 .idea/
 run/
