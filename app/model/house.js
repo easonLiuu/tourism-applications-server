@@ -17,6 +17,11 @@ module.exports = app => {
       startTime: DATE,
       endTime: DATE
     });
+    
+    //一个房子对应多个图片, hasMany
+    House.associate = () => {
+        app.model.House.hasMany(app.model.Imgs, { foreignKey: 'houseId'});
+    }
   
     return House;
   }
