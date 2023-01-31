@@ -12,6 +12,14 @@ module.exports = app => {
       msg: STRING(500),
       createTime: DATE
     });
+
+    //多表联查
+
+    //多对一
+    Comment.associate = () => {
+        app.model.Comment.belongsTo(app.model.User, { foreignKey: 'userId'});
+    }
+
   
     return Comment;
   }
