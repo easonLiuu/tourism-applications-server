@@ -56,6 +56,23 @@ class OrdersService extends BaseService {
       return result;
     });
   }
+
+  async pay(params) {
+    return this.run(async (ctx) => {
+      const result = await ctx.model.Orders.update(
+        {
+          isPayed: 1,
+          orderNumber: params.orderNumber,
+        },
+        {
+          where: {
+            id: params.id,
+          },
+        }
+      );
+      return result;
+    });
+  }
 }
 
 module.exports = OrdersService;

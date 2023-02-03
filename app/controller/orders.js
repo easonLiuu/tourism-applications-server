@@ -39,6 +39,32 @@ class OrdersController extends BaseController {
     });
     this.success(result);
   }
+
+  async invokePay(params) {
+    return {
+      orderNumber: params.id + new Date().getTime(),
+    };
+  }
+
+  async pay() {
+    const { ctx, app } = this;
+    const { id } = ctx.params();
+    const order = await ctx.model.Orders.findByPk(id);
+    if (order) {
+      try {
+        const beforePay = await this.invokePay({ id });
+        const result = await ctx.service.orders.pay({
+          id,
+          orderNumber: beforePay.orderNumber,
+        });
+        this.success(result);
+      } catch (error) {
+        this.error("订单支付失败!");
+      }
+    } else {
+      this.error("订单不存在");
+    }
+  }
 }
 
 module.exports = OrdersController;
