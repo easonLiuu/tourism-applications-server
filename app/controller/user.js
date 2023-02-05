@@ -160,6 +160,8 @@ class UserController extends BaseController {
     const result = ctx.service.user.edit({
       ...ctx.params(),
       updateTime: ctx.helper.time(),
+      //xss防御 过滤输入
+      sign: ctx.helper.escape(ctx.params('sign'))
     });
 
     this.success(result);
