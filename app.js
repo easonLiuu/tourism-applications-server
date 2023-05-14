@@ -13,9 +13,15 @@ module.exports = app => {
             store[key] = null
         },
     };
-
-    app.config.coreMiddleware.push('notFound');
-    app.config.coreMiddleware.push('auth');
-    console.log(app.config.coreMiddleware)
+    const mids = app.config.coreMiddleware
+    app.config.coreMiddleware = [...mids, ...[
+        'allowHosts',
+        'notFound',
+        'auth'
+    ]]
+    // app.config.coreMiddleware.push('allowHosts');
+    // app.config.coreMiddleware.push('notFound');
+    // app.config.coreMiddleware.push('auth');
+    // console.log(app.config.coreMiddleware)
     
 }

@@ -24,6 +24,8 @@ module.exports = appInfo => {
     type: 'all'
   };
 
+  config.allowHosts = ['localhost:8000', '127.0.0.1:8000']
+
   config.security = {
     csrf: {
       enable: false,

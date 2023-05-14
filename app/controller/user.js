@@ -16,8 +16,8 @@ class UserController extends BaseController {
       },
       app.config.jwt.secret
     );
-    //ctx.session[username] = 1;
-    //设置redis缓存
+    // ctx.session[username] = 1;
+    // 设置redis缓存
     await app.redis.set(username, token, "EX", app.config.redisExpire);
     return token;
   }
